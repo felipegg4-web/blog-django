@@ -6,6 +6,15 @@
 <h2>{{ post.title }}</h2>
 <p><small>Publicado em {{ post.date|date:"d/m/Y H:i" }}</small></p>
 
+<p>
+    Categorias:
+    {% for category in post.categories.all %}
+        <a href="{% url 'category_detail' category.pk %}">{{ category.name }}</a>{% if not forloop.last %}, {% endif %}
+    {% empty %}
+        nenhuma
+    {% endfor %}
+</p>
+
 <div>{{ post.content|safe }}</div>
 
 <p>

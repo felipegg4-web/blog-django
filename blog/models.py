@@ -4,10 +4,22 @@ from django.urls import reverse
 from django.utils import timezone
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+
+    class Meta:
+        verbose_name_plural = 'categories'
+
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     date = models.DateTimeField(default=timezone.now)
+    categories = models.ManyToManyField(Category, related_name='posts', blank=True)
 
     class Meta:
         ordering = ['-date']
