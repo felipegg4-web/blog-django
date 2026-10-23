@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Posts</h2>
-<p><a href="{% url 'post_create' %}">+ Novo post</a></p>
+{% if category %}
+    <h2>Categoria: {{ category.name }}</h2>
+    <p>{{ category.description }}</p>
+{% else %}
+    <h2>Posts</h2>
+    <p><a href="{% url 'post_create' %}">+ Novo post</a></p>
+{% endif %}
+
 <ul>
     {% for post in posts %}
         <li>

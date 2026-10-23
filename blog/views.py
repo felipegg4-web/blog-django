@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post
+from .models import Post, Category
 from .forms import PostForm, CommentForm
 
 
@@ -46,3 +46,15 @@ def comment_create(request, pk):
     else:
         form = CommentForm()
     return render(request, 'blog/comment_form.html', {'form': form, 'post': post})
+
+
+class CategoryListView(ListView):
+    model = Category
+    template_name = 'blog/category_list.html'
+    context_object_name = 'categories'
+
+
+def category_detail(request, pk):
+    category = get_object_or_404(Category, pk=pk)
+    posts = category.posts.all()
+    return render(request, 'blog/post_list.html', {'posts': posts, 'category': category})
