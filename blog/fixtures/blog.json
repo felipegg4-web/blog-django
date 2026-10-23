@@ -11,7 +11,7 @@
   "model": "blog.category",
   "pk": 2,
   "fields": {
-    "name": "Programação",
+    "name": "ProgramaÃ§Ã£o",
     "description": "Posts sobre desenvolvimento de software"
   }
 },
@@ -28,7 +28,7 @@
   "pk": 1,
   "fields": {
     "title": "Meu primeiro post",
-    "content": "<p>Este é o primeiro post do blog, criado como parte da disciplina de Sistemas de Informação na Poli-USP.</p>\r\n<p>O blog foi desenvolvido com o <strong>Django</strong>, um framework web em Python que segue o padrão <em>Model-View-Template</em>.</p>",
+    "content": "<p>Este Ã© o primeiro post do blog, criado como parte da disciplina de Sistemas de InformaÃ§Ã£o na Poli-USP.</p>\r\n<p>O blog foi desenvolvido com o <strong>Django</strong>, um framework web em Python que segue o padrÃ£o <em>Model-View-Template</em>.</p>",
     "date": "2026-10-23T18:46:53Z",
     "categories": [
       1,
@@ -40,8 +40,8 @@
   "model": "blog.post",
   "pk": 2,
   "fields": {
-    "title": "O que é uma aplicação CRUD?",
-    "content": "<p>CRUD é a sigla para as quatro operações básicas de um sistema que manipula dados:</p>\r\n<ul>\r\n    <li><strong>Create</strong>: criar novos registros;</li>\r\n    <li><strong>Read</strong>: ler e exibir registros;</li>\r\n    <li><strong>Update</strong>: editar registros existentes;</li>\r\n    <li><strong>Delete</strong>: remover registros.</li>\r\n</ul>\r\n<p>Este blog implementa as quatro operações para os posts.</p>",
+    "title": "O que Ã© uma aplicaÃ§Ã£o CRUD?",
+    "content": "<p>CRUD Ã© a sigla para as quatro operaÃ§Ãµes bÃ¡sicas de um sistema que manipula dados:</p>\r\n<ul>\r\n    <li><strong>Create</strong>: criar novos registros;</li>\r\n    <li><strong>Read</strong>: ler e exibir registros;</li>\r\n    <li><strong>Update</strong>: editar registros existentes;</li>\r\n    <li><strong>Delete</strong>: remover registros.</li>\r\n</ul>\r\n<p>Este blog implementa as quatro operaÃ§Ãµes para os posts.</p>",
     "date": "2026-10-23T18:48:29Z",
     "categories": [
       2,
@@ -53,8 +53,8 @@
   "model": "blog.post",
   "pk": 8,
   "fields": {
-    "title": "Minha experiência na Mecatrônica",
-    "content": "<p>Entrei na Poli pela Fuvest e hoje curso Engenharia Mecatrônica.</p>\r\n<p>O curso combina <strong>mecânica</strong>, <strong>eletrônica</strong> e <strong>computação</strong>, e a disciplina de Sistemas de Informação é onde aprendo a desenvolver aplicações web como este blog.</p>",
+    "title": "Minha experiÃªncia na MecatrÃ´nica",
+    "content": "<p>Entrei na Poli pela Fuvest e hoje curso Engenharia MecatrÃ´nica.</p>\r\n<p>O curso combina <strong>mecÃ¢nica</strong>, <strong>eletrÃ´nica</strong> e <strong>computaÃ§Ã£o</strong>, e a disciplina de Sistemas de InformaÃ§Ã£o Ã© onde aprendo a desenvolver aplicaÃ§Ãµes web como este blog.</p>",
     "date": "2026-10-23T19:36:08Z",
     "categories": [
       1
