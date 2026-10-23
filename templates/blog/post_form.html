@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{% if post %}Editar post{% else %}Novo post{% endif %}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <p>
+        <label>Título:<br>
+        <input type="text" name="title" value="{{ post.title }}" size="60"></label>
+    </p>
+    <p>
+        <label>Conteúdo (HTML):<br>
+        <textarea name="content" rows="12" cols="60">{{ post.content }}</textarea></label>
+    </p>
+    <button type="submit">Salvar</button>
+</form>
+
+<p><a href="{% url 'post_list' %}">Cancelar</a></p>
+{% endblock %}
